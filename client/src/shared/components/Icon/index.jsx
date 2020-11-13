@@ -8,6 +8,7 @@ const fontIconCodes = {
   [`stopwatch`]: '\\e914',
   [`task`]: '\\e910',
   [`story`]: '\\e911',
+  [`enhancement`]: '\\e911',
   [`arrow-down`]: '\\e90a',
   [`arrow-left-circle`]: '\\e917',
   [`arrow-up`]: '\\e90b',

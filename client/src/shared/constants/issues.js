@@ -1,6 +1,7 @@
 export const IssueType = {
   TASK: 'task',
   BUG: 'bug',
+  ENHANCEMENT: 'enhancement',
   STORY: 'story',
 };
 
@@ -23,6 +24,7 @@ export const IssueTypeCopy = {
   [IssueType.TASK]: 'Task',
   [IssueType.BUG]: 'Bug',
   [IssueType.STORY]: 'Story',
+  [IssueType.ENHANCEMENT]: 'Enhancement',
 };
 
 export const IssueStatusCopy = {

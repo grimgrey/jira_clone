@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Icon, AboutTooltip } from 'shared/components';
+import { Icon } from 'shared/components';
 
-import { NavLeft, LogoLink, StyledLogo, Bottom, Item, ItemText } from './Styles';
+import { NavLeft, LogoLink, StyledLogo, Item, ItemText } from './Styles';
 
 const propTypes = {
   issueSearchModalOpen: PropTypes.func.isRequired,
@@ -26,7 +26,7 @@ const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen }) => (
       <ItemText>Create Issue</ItemText>
     </Item>
 
-    <Bottom>
+    {/* <Bottom>
       <AboutTooltip
         placement="right"
         offset={{ top: -218 }}
@@ -37,7 +37,7 @@ const ProjectNavbarLeft = ({ issueSearchModalOpen, issueCreateModalOpen }) => (
           </Item>
         )}
       />
-    </Bottom>
+    </Bottom> */}
   </NavLeft>
 );
 

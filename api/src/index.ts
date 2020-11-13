@@ -14,7 +14,9 @@ import { attachPublicRoutes, attachPrivateRoutes } from './routes';
 
 const establishDatabaseConnection = async (): Promise<void> => {
   try {
+    console.log(`Connecting to DB`);
     await createDatabaseConnection();
+    console.log(`DB connected!`);
   } catch (error) {
     console.log(error);
   }
@@ -31,6 +33,10 @@ const initializeExpress = (): void => {
 
   attachPublicRoutes(app);
 
+  app.get('/grey', (_req, res) => {
+    res.send('Hi, Grey!');
+  });
+
   app.use('/', authenticateUser);
 
   attachPrivateRoutes(app);
@@ -38,7 +44,9 @@ const initializeExpress = (): void => {
   app.use((req, _res, next) => next(new RouteNotFoundError(req.originalUrl)));
   app.use(handleError);
 
-  app.listen(process.env.PORT || 3000);
+  app.listen(process.env.PORT || 3000, () => {
+    console.log(`App running at PORT ${process.env.PORT}`);
+  });
 };
 
 const initializeApp = async (): Promise<void> => {
